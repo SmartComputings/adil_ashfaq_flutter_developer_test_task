@@ -1,111 +1,104 @@
-Perfect ✅ — here’s a **complete README file** you can drop straight into your Git repo for the Flutter developer test assignment. It looks professional, structured, and easy for a candidate (or evaluator) to follow.
-
-```markdown
-# 🚀 Flutter Developer Test Assignment
+````markdown
+# 💰 Mini Crypto App (prism-miniapp)
 
 ## 📌 Overview
-This repository contains the **Flutter Developer Test Assignment**.  
-The goal is to build a **mini Flutter app** with the following core features:
+This is a **test assignment Flutter mini-app** for a developer evaluation.  
+The app demonstrates two main features:
 
-- **Test Crypto Wallet**
-  - View balance
-  - Send transfers
-  - Transaction history
+1. **Crypto Wallet (Test)**
+   - View balance
+   - Send transfer
+   - Transaction history
 
-- **One-to-One Chat**
-  - Real-time chat using **Firebase** or **WebSocket**
-  - Push notifications for new messages
+2. **One-to-One Chat**
+   - Real-time messaging (Firebase or WebSocket)
+   - Push notifications for new messages
 
-- **Delivery**
-  - Provide a working **APK file**
-  - Push complete code, documentation, and APK into this repository
+The candidate must build, document, and deliver the app with an **APK** and source code.
 
 ---
 
 ## ✅ Requirements
 
-### 1. Crypto Wallet
-- Show **test account balance** (use testnet or mock API).
-- Allow **sending transfers** to another account.
-- Display **transaction history** (pending, success, failed).
+### Crypto Wallet
+- Show test account balance (use mock/testnet APIs).
+- Send transfers to another account.
+- Transaction history with statuses: *pending / success / failed*.
 
-### 2. Chat
-- Implement **one-to-one chat** (text messages only).
-- Support **real-time updates** using **Firebase** or **WebSocket**.
-- Enable **push notifications** for incoming messages.
-- Notifications must open the chat screen.
+### One-to-One Chat
+- Chat between two users.
+- Real-time updates via Firebase or WebSocket.
+- Push notifications for incoming messages.
+- Notifications should open the chat screen.
 
-### 3. Delivery
-- Push **source code** into this repo.
+### Delivery
+- Push **full source code** into this repo.
 - Add a working **APK** inside `releases/app.apk`.
-- Write a **README.md** (setup & build instructions).
-- Create a **DOCS.md** with:
-  - Architecture diagram
-  - Design decisions
-  - APIs/services used
-  - Known limitations
+- Provide:
+  - `README.md` → setup & build instructions  
+  - `DOCS.md` → architecture, design choices, APIs used  
 
-### 4. Deadline
-- Submit code and APK by **Sunday night** or **Monday morning before office**.
+### Deadline
+Submit by **Sunday night / Monday morning before office**.
 
 ---
 
-## 📂 Suggested Repo Structure
+## 📂 Project Structure
 
-```
-
+```text
 prism-miniapp/
 ├─ lib/
-│  ├─ main.dart
+│  ├─ main.dart                 # App entry point
 │  ├─ screens/
-│  │  ├─ wallet/
-│  │  │  ├─ wallet\_screen.dart
-│  │  │  ├─ send\_screen.dart
-│  │  ├─ chat/
-│  │  │  ├─ chat\_screen.dart
-│  │  │  ├─ chat\_list.dart
+│  │  ├─ wallet/                # Wallet UI
+│  │  │  ├─ wallet_screen.dart
+│  │  │  ├─ send_screen.dart
+│  │  ├─ chat/                  # Chat UI
+│  │  │  ├─ chat_screen.dart
+│  │  │  ├─ chat_list.dart
 │  ├─ services/
-│  │  ├─ wallet\_service.dart
-│  │  ├─ chat\_service.dart
-│  ├─ utils/
-├─ android/
-├─ ios/
-├─ releases/app.apk
-├─ README.md
-├─ DOCS.md
-
+│  │  ├─ wallet_service.dart    # Wallet logic (API/testnet/mock)
+│  │  ├─ chat_service.dart      # Chat logic (Firebase/WebSocket)
+│  ├─ utils/                    # Helpers, constants, configs
+├─ android/                     # Android project files
+├─ ios/                         # iOS project files
+├─ releases/app.apk             # Final APK output
+├─ README.md                    # Setup instructions
+├─ DOCS.md                      # Architecture & documentation
 ````
 
 ---
 
 ## ⚙️ Getting Started
 
-### 1. Clone the repo
+### Clone the repo
+
 ```bash
 git clone <your-repo-url>
 cd prism-miniapp
-````
+```
 
-### 2. Install dependencies
+### Install dependencies
 
 ```bash
 flutter pub get
 ```
 
-### 3. Run the app
+### Run the app
 
 ```bash
 flutter run
 ```
 
-### 4. Build the APK
+### Build APK
 
 ```bash
 flutter build apk --debug
-# APK will be generated at: build/app/outputs/flutter-apk/app-debug.apk
+# APK will be generated at:
+# build/app/outputs/flutter-apk/app-debug.apk
 ```
 
-Copy the APK to:
+Move/copy the APK into:
 
 ```
 releases/app.apk
@@ -115,29 +108,32 @@ releases/app.apk
 
 ## 📝 Notes
 
-* Use **testnet** or **mock APIs** for wallet functionality (no real funds).
-* Firebase or WebSocket is acceptable for chat — document your choice in `DOCS.md`.
-* Push notifications should open the **chat screen** when tapped.
-* Code must be clean, modular, and documented.
+* Use **mock APIs** or **testnet RPC providers** for wallet — no real funds.
+* Either **Firebase** or a **custom WebSocket server** can be used for chat.
+* Push notifications should open the chat screen.
+* Document all assumptions in `DOCS.md`.
 
 ---
 
 ## 🔍 Evaluation Criteria
 
-* **Functionality (50%)** – Wallet and chat features implemented as described.
-* **Code Quality (20%)** – Clean, modular, maintainable code.
-* **Documentation (15%)** – Clear instructions and architecture documentation.
-* **UX & Error Handling (10%)** – Smooth flow, meaningful errors, responsive UI.
-* **Bonus (5%)** – Extra polish: tests, offline support, better UI, optimizations.
+* **Functionality (50%)** — Wallet + chat features working.
+* **Code Quality (20%)** — Clean, modular, maintainable.
+* **Documentation (15%)** — Clear README + DOCS.
+* **UX & Error Handling (10%)** — Smooth, user-friendly flow.
+* **Bonus (5%)** — Tests, offline mode, polished UI.
 
 ---
 
 ## 📧 Submission
 
-* Push all code, docs, and APK to this repository.
-* Ensure the APK is available in: `releases/app.apk`.
-* Submit by **Sunday night / Monday morning before office**.
+* Push **code + APK + docs** to this repository.
+* Ensure APK is available in: `releases/app.apk`.
+* Deadline: **Sunday night / Monday morning before office**.
 
 ---
 
+```
+
+👉 Do you want me to also generate a **DOCS.md template** (with placeholders for architecture diagram, APIs, and design decisions) so developers just fill it in?
 ```
