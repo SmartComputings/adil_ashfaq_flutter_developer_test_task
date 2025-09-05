@@ -134,6 +134,3 @@ releases/app.apk
 ---
 
 ```
-
-👉 Do you want me to also generate a **DOCS.md template** (with placeholders for architecture diagram, APIs, and design decisions) so developers just fill it in?
-```
