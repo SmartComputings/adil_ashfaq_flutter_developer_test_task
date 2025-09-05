@@ -35,3 +35,35 @@ Submit your code and APK by **Sunday night** or **Monday morning before office**
 ---
 
 ## 📂 Suggested Repo Structure
+
+prism-miniapp/
+├─ lib/
+│ ├─ screens/
+│ │ ├─ wallet/
+│ │ ├─ chat/
+│ ├─ services/
+├─ releases/app.apk
+├─ README.md
+├─ DOCS.md
+
+
+
+---
+
+## 📝 Notes
+- Use **testnet** or **mock APIs** for wallet (no real funds).
+- Firebase or WebSocket is acceptable for chat — document your choice.
+- Push notifications must open the chat screen.
+- Code should be clean, modular, and documented.
+
+---
+
+## 🔍 Evaluation Criteria
+- Functionality (50%)  
+- Code quality (20%)  
+- Documentation (15%)  
+- UX & error handling (10%)  
+- Bonus (5%): tests, offline support, extra polish  
+
+---
+
